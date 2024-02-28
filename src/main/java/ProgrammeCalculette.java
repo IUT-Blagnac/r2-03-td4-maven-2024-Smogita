@@ -6,11 +6,20 @@
  */
 public class ProgrammeCalculette
 {
+    /**
+     * Permet de créer une pile
+     * @return une pile
+     */
     public static Pile creerPile(){
         Pile p = new Pile();
         return p;
     }
 
+    /**
+     * Renvoie un booléen si la pile est vide
+     * @param pile : une pile
+     * @return l'état (vide ou non) d'une pile
+     */
     public static boolean estVide(Pile pile){
         boolean vide = true;
         if (pile.indiceSommet > -1){
@@ -19,6 +28,11 @@ public class ProgrammeCalculette
         return vide;
     }
 
+    /**
+     * Permet de dépiler un élément d'une pile
+     * @param pile : une pile
+     * @throws Exception si la pile est vide, renvoie un message d'erreur
+     */
     public static void depiler(Pile pile) throws Exception{
         if (pile.indiceSommet <= -1){
             throw new Exception("Impossible de dépiler");
@@ -29,6 +43,12 @@ public class ProgrammeCalculette
         }
     }
 
+    /**
+     * Permet d'empiler un élément sur une pile
+     * @param pile : une pile
+     * @param entier : un entier à empiler dans la pile
+     * @throws Exception si la pile est pleine, renvoie un message d'erreur
+     */
     public static void empiler(Pile pile, int entier) throws Exception{
         if (pile.indiceSommet >= 99){
             throw new Exception("Impossible d'empiler");
@@ -39,6 +59,12 @@ public class ProgrammeCalculette
         }
     }
 
+    /**
+     * Renvoie la hauteur de la pile
+     * @param pile : une pile
+     * @return la hauteur de la pile
+     * @throws Exception si la pile est vide, renvoie un message d'erreur
+     */
     public static int sommet(Pile pile) throws Exception{
         int entier;
         if (estVide(pile) == true){
@@ -50,6 +76,9 @@ public class ProgrammeCalculette
         return entier;
     }
 
+    /**
+     * Affiche le contenu de la pile sous forme de String
+     */
     public static String toString(Pile pfPile){
         String chaine = "";
         for (int i = 0; i <= pfPile.indiceSommet; i++){
@@ -60,6 +89,11 @@ public class ProgrammeCalculette
         return chaine;
     }
 
+    /**
+     * Renvoie la taille d'une pile
+     * @param pfPile
+     * @return indiceSommet d'une pile, soit sa taille
+     */
     public static int nbElements(Pile pfPile){
         return pfPile.indiceSommet + 1;
     }

@@ -13,12 +13,18 @@ public class Pile
     int[] elements;
     int indiceSommet;
     
+    /**
+     * Construsteur d'une pile avec aucun paramètres
+     */
     public Pile()
     {
         this.elements = new int[100];
         this.indiceSommet = -1;
     }
 
+    /**
+     * Construsteur d'une pile avec en paramètre sa taille
+     */
     public Pile(int pfTaille)
     {
         this.elements = new int[pfTaille];
