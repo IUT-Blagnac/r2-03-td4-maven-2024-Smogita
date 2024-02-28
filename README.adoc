@@ -30,5 +30,7 @@ En utilisant gitpod et maven, il faut, sur Visual Studio Code :
 - exécuter `mvn compile`
 - exécuter `mvn package`
 - exécuter `java -jar target/tp_qualite-1.0.jar`
+- dans le `pom.xml`, changer le mainClass par le programme que l'on souhaite exécuter
+- exécuter `mvn site`(pour générer la JavaDoc)
 
 
